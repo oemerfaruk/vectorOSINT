@@ -3,7 +3,7 @@ from global_analysis import analyze_all_posts
 
 def main():
     print("=== Otomatik Raporlama Servisi Başlatıldı ===")
-    print("Mod: Test (Her 5 dakikada bir analiz)")
+    print("Mod: Test (Her 120 dakikada bir analiz)")
     
     while True:
         current_time = time.strftime("%Y-%m-%d %H:%M:%S")
