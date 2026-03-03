@@ -15,9 +15,9 @@ def main():
         except Exception as e:
             print(f"[{current_time}] Rapor oluşturulurken hata oluştu: {e}")
             
-        print("Bir sonraki analiz için bekleniyor (5 dakika)...")
+        print("Bir sonraki analiz için bekleniyor (120 dakika)...")
         
-        # Test için 5 dakika (300 saniye). 
+        # Test için 120 dakika (7200 saniye). 
         # Saat başı çalıştırmak için bu değeri 3600 yapın.
         time.sleep(7200)
 
