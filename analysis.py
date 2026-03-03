@@ -2,7 +2,7 @@ import ollama
 import sqlite3
 
 # 1. SQL Bağlantısı
-conn = sqlite3.connect('reddit_rss.db')
+conn = sqlite3.connect('osint_data_v2.db')
 cursor = conn.cursor()
 cursor.execute("SELECT title FROM reddit_posts LIMIT 5") # Test için 5 tane
 posts = cursor.fetchall()
