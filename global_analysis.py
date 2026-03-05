@@ -3,6 +3,9 @@ import sqlite3
 import datetime
 import os
 
+# bölge ve konu bazlı raporlama hazırlanmalı...
+
+
 def analyze_all_posts():
     # 1. Veritabanı Bağlantısı
     try:
