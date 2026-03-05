@@ -83,7 +83,8 @@ subreddits = ['CredibleDefense','WarCollege','Military',
               'Intelligence','geopolitics','OSINT','worldnews',
               'UkrainianConflict','SyrianCivilWar','CombatFootage',
               'Aviation','Tanks','TankPorn','Army','AFV','Warships',
-              'WarshipPorn','Navy','Submarines','MilitarySpace','Defense']
+              'WarshipPorn','Navy','Submarines','MilitarySpace','Defense',
+              'borsavefon', 'Kanatlar']
 
 while True:
     for subreddit in subreddits:
