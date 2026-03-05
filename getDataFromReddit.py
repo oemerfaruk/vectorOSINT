@@ -79,11 +79,15 @@ def store_posts(entries, subreddit):
     
     session.commit()
 
-subreddits = ['CredibleDefense','WarCollege','Military','Intelligence','geopolitics','OSINT','worldnews','UkrainianConflict','SyrianCivilWar','CombatFootage','Aviation','Tanks','TankPorn','Army','AFV','Warships','WarshipPorn','Navy','Submarines','MilitarySpace','Defense']
+subreddits = ['CredibleDefense','WarCollege','Military',
+              'Intelligence','geopolitics','OSINT','worldnews',
+              'UkrainianConflict','SyrianCivilWar','CombatFootage',
+              'Aviation','Tanks','TankPorn','Army','AFV','Warships',
+              'WarshipPorn','Navy','Submarines','MilitarySpace','Defense']
 
 while True:
     for subreddit in subreddits:
         rss_entries = fetch_rss(f'https://www.reddit.com/r/{subreddit}.rss')
         store_posts(rss_entries, subreddit)
     
-    time.sleep(3600)
+    time.sleep(360)
