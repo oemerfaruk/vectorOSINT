@@ -6,7 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 # Veritabanı ayarları
-engine = create_engine('sqlite:///osint_data_v2.db')
+engine = create_engine('sqlite:///osint_finance_data.db')
 Base = declarative_base()
 
 # Tablo yapısını tanımlama
@@ -79,12 +79,25 @@ def store_posts(entries, subreddit):
     
     session.commit()
 
-subreddits = ['CredibleDefense','WarCollege','Military',
-              'Intelligence','geopolitics','OSINT','worldnews',
-              'UkrainianConflict','SyrianCivilWar','CombatFootage',
-              'Aviation','Tanks','Army','AFV','Warships' ,'Navy',
-              'Submarines','MilitarySpace','Defense',
-              'borsavefon', 'Kanatlar']
+subreddits = [
+    # --- Küresel Finans & Ekonomi (Yeni Eklenenler) ---
+    'Economics',           # Makroekonomi makaleleri ve akademik düzeyde tartışmalar
+    'investing',           # Temel/teknik analiz odaklı ciddi yatırım topluluğu
+    'stocks',              # Küresel borsa, hisse senetleri ve piyasa haberleri
+    'personalfinance',     # Bireysel finans, portföy yönetimi ve bütçeleme
+    'finance',             # Kurumsal finans ve finans sektörü üzerine profesyonel tartışmalar
+    'wallstreetbets',      # Spekülatif hamleler ve yüksek riskli piyasa hareketleri
+    'options',             # Türev piyasalar ve opsiyon ticareti odaklı
+    'MacroEconomics',      # Küresel para politikaları ve merkez bankası kararları
+    
+    # --- Küresel Politika & Uluslararası İlişkiler (Yeni Eklenenler) ---
+    'politics',            # Ağırlıklı ABD ve global etkileri olan en büyük politika subbredit'i
+    'PoliticalDiscussion', # Haber linki paylaşımından ziyade medeni fikir teatisi alanı
+    'InternationalRelations', # Uluslararası ilişkiler teorileri ve dış politika analizleri
+    'news',                # Dünya genelinden güncel siyasi ve toplumsal gelişmeler
+    'EuropeanFederalists', # Avrupa Birliği politikaları ve geleceği üzerine odaklı
+    'ukpolitics'           # Avrupa ve Birleşik Krallık siyasetinin merkezi
+]
 
 while True:
     for subreddit in subreddits:
